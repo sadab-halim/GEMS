@@ -38,10 +38,10 @@ public class Flat {
 This is Shallow Clone <br/>
 
 **Shallow Clone** means *references are copied*.
-    <img src = "../../../images/cj-shallow-clone.png">
+    <img src = "../images/cj-shallow-clone.png">
 
 **Deep Clone**, objects of F1 and F2 are Shallow Clone, whereas Playground is Deep Clone.
-    <img src = "../../../images/cj-deep-clone.png">
+    <img src = "../images/cj-deep-clone.png">
 
 - The default implementation of clone() is the Shallow Clone
     - because objects class does not know hierarchy of objects.
@@ -209,7 +209,7 @@ Employee [name=Name [firstName=Shivam, lastName=Singh]]
 - first both was Shiv, but later we changed the code, and both firstName are now Shivam whereas lastName remain as the prvs
 - emp2 is copied by value
 - another obj is algo going to point the same name
-	<img src = "../../../images/cloning-1.png">
+	<img src = "../images/cloning-1.png">
 
 ### Modification - 1 (Making it Clone)
 - instead of sayinng `emp1.copy()` modifiying it by writing `emp1.clone()`

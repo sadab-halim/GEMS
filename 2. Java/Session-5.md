@@ -97,7 +97,7 @@
 	- Topmost class is Throwable
 	- It's subclasses are **Exceptions** and **Errors**
 	- **Runtime Exceptions** are *Unchecked Exceptions*
-    <img src = "../../../images/exception-hierarchy.png">
+    <img src = "../images/exception-hierarchy.png">
 - **NOTE**: Errors are not exceptions, errors are throwable
 - If we want to catch error, we need to catch either Error or Throwable
 
@@ -943,7 +943,7 @@ public class NameList {
 	- and this ref is pointed to the heap memory (shown in red line)
 	- and that is why i, j were copied by value to the memory.
 	- once, it goes outside the method, the value are popped, stack is clear; hence pointer returns to its original pos
-		<img src = "../../../images/java-obj-lifecycle-1.png">
+		<img src = "../images/java-obj-lifecycle-1.png">
 #### Case 2
 - Created another obj of ArrayList, which has its own List structure inside it
 - names object were created; ref attached
@@ -970,7 +970,7 @@ public class NameList {
 	- that's why names was not modified, as we can see from the diagram
 		- names is still pointing to the prvs memory location [Suresh, Ramesh]
 	- So, when we changed the ref, it was independent of each other (*red and blue line*) and that's why the changes did not reflected outside
-		<img src = "../../../images/java-obj-lifecycle-2.png">	
+		<img src = "../images/java-obj-lifecycle-2.png">	
 - **Case B:**
 	```java
 	public class NameList {
@@ -993,7 +993,7 @@ public class NameList {
 			- that means inNames is started pointing to same memory
 		- and when we start to change it's internal state, it'll change
 		- bcoz now names and inNames are pointing to same memory location 
-			<img src = "../../../images/java-obj-lifecycle-3.png">	
+			<img src = "../images/java-obj-lifecycle-3.png">	
 
 		
 ----------------------------------------------
@@ -1003,12 +1003,12 @@ public class NameList {
 - Which objects are eligible for Garbage Collection? <br/>
 👉 Objects which are not being reffered by any valid 		reference is eligible for Garbage Collection
 - Since all the refs are connected to each other, any of the ref, will not be eligible for the Garbage Collection
-	<img src = "../../../images/java-obj-lifecycle-4.png">
+	<img src = "../images/java-obj-lifecycle-4.png">
 - But, if A becomes null, then all those objects which are being reffered by A, will become eligible for Garbage Collection
-	<img src = "../../../images/java-obj-lifecycle-5.png">
+	<img src = "../images/java-obj-lifecycle-5.png">
 - Objects/Values are **LIVE** till their are inside the scope, once they come out of the scope, all of them becomes null, and is now eligible for Garbage Collection.
 - Look at this example 👇
-	<img src = "../../../images/java-obj-lifecycle-6.png">
+	<img src = "../images/java-obj-lifecycle-6.png">
 	- Even though A's ref from outside was set to null, but the A, B and C, are internally connected to each other with their refs.
 	- They are forever going to maintain ref in a cyclic manner
 	- So, Garbage Collector will not be able to pick them up.

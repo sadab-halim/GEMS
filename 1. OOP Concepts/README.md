@@ -266,10 +266,10 @@ All these three models are separate, but they provide input to each other/they d
     - topmost portion
     - middle portion
     - bottom portion
-    <img src = "../../images/class.png" width = "250px">
+    <img src = "../images/class.png" width = "250px">
     
     *Topmost participation* contains the **name of the class**.
-    <img src = "../../images/topmost-part-of-class.png" width = "250px">
+    <img src = "../images/topmost-part-of-class.png" width = "250px">
     
     - The *middle partition/portion* of the class is used to specify **how the data of the object should be enetered.**
         - The set of entries in the middle portion of the class is known as **Attributes.**
@@ -277,17 +277,17 @@ All these three models are separate, but they provide input to each other/they d
         - A **Key** is name of that attribute and **Value** is the data type of that attribute.
         - Always use primitive data types to express attributes.
         - Example:
-        <img src = "../../images/middle-part-of-class.png" width = "250px">
+        <img src = "../images/middle-part-of-class.png" width = "250px">
     - The third (bottom) partition/portion of the class is the place to write the **operations/activities** to be performed. 
     - The bottom portion of the class basically **signifies the signature of operation** which can be called on this Vehicle *(say classname)*. <br/>
-    <img src = "../../images/bottom-part-of-class.png" width = "250px">
+    <img src = "../images/bottom-part-of-class.png" width = "250px">
 
 ## Object Representation
 - A class has potential to create muliple instances of object, from a single class description.
 - An object is represented as underlined text and the object name is written before the colon, as shown below
 - Here, key is the name of the attribute which is same as the class, but the **value of the key** in the object representation is **actual value** which is specific to the particular instance of that object.
 - This represents an object. 👇 <br/>
-<img src = "../../images/oops-uml-object-representation.png">
+<img src = "../images/oops-uml-object-representation.png">
 
 - We can also keep an object without specifying any name, this type of object is known as **Anonymous Object**. *(Third Example shown in the diagram above)*
 
@@ -310,11 +310,11 @@ As decomposition says, we should distribute the available information across all
 - In general, enumerated data types does not have any behaviour, their operations are fixed and that is why enumeration can be shown with the possible values.
 
 ## Composite Type Relationship
-- <img src = "../../images/composite-type-relationship.png" width = "300px">
+- <img src = "../images/composite-type-relationship.png" width = "300px">
 - Enumeration is different from class, it does not have key-value pairs
 - Example of Composite type relationship
-- <img src = "../../images/example-1-ctrelationship.png" width = "350px">
-- <img src = "../../images/example-2-ctrelationship.png" width = "350px">
+- <img src = "../images/example-1-ctrelationship.png" width = "350px">
+- <img src = "../images/example-2-ctrelationship.png" width = "350px">
 - If their is a relationship at the class level, then their can also be a relationship at the object level.
 
 ## Relationship - Association
@@ -325,8 +325,8 @@ As decomposition says, we should distribute the available information across all
 - Invalid values: -ve functions
 - Straight line represents an association
 - The solid triangle is the reading direction whereas the name before than symbol denotes association name. <br/>
-- <img src = "../../images/association-nd-triangle.png" width = "100px"> <br/>
-- <img src = "../../images/association-relationship-diagram.png" width = "400px">
+- <img src = "../images/association-nd-triangle.png" width = "100px"> <br/>
+- <img src = "../images/association-relationship-diagram.png" width = "400px">
 
     - A Person can drive either no car or 1 car atmost (0..1).
     - A Car can be driven by either nobody or atmost 1 person (0..1)
@@ -343,13 +343,13 @@ As decomposition says, we should distribute the available information across all
 ## Relationship - Aggregation
 - *SportsTeam* and *SocialCircle* are **whole** whereas *Student* are **part** of relationship
 - Independent objets in **whole-part relationship**
-<img src = "../../images/aggregation-oops.png" width = "400px">
+<img src = "../images/aggregation-oops.png" width = "400px">
 - One *SportsTeam* can have 1..15 players (*Student*), whereas a Student can **play for** of 0..3 *SportsTeam*
 
 - Similarly, A *SocialCircle* can have any number of volunteer as (*Students*) whereas a Student can **contribute to** any number of *SocialCircle*
 
 - Objects of the above class diagrams 👇
-<img src = "../../images/aggregation-oops-2.png" >
+<img src = "../images/aggregation-oops-2.png" >
 
 - The relationship in an object has a simple link, a simple straight line.
 - Link means, for example object *Student* can **collaborate** with object *SocialCircle* with **each other**
@@ -364,8 +364,8 @@ As decomposition says, we should distribute the available information across all
 - Composition is realted to lifetime and is more solid than Aggregation.
 - Represented as filled diamond at the container side.
 - "**Contained**" doesn't existence outside "**Container**"
-<img src = "../../images/composition-1.png" width= "350px"> <br/>
-    <img src = "../../images/composition-2.png" width = "350px">
+<img src = "../images/composition-1.png" width= "350px"> <br/>
+    <img src = "../images/composition-2.png" width = "350px">
 
 ## Relationship - Inheritance
 - **Car** *IS A type* of **Fourwheeler**
@@ -377,7 +377,7 @@ As decomposition says, we should distribute the available information across all
 - Always a Derived classes inherit Base class features
 - Represented as an arrow with hollow triangle, and hollow traingle is always pointing towards the Base Class side.
 - This is an example of Code Reuse (*Inheritance Relationship*)
-    <img src = "../../images/inheritance.png" width = "400px">
+    <img src = "../images/inheritance.png" width = "400px">
     - Engine is an *integral part* of Vehicle (**Composition**), Fourwheeler *IS A* Vehicle, Twowheel *IS A* vehcile. Therefore, Engine is also an *integral part* of Fourwheeler
         - because Vehicle is the Base/Parent/Super Class and Fourwheeler is the Derived/Child/Sub Class
 
@@ -395,7 +395,7 @@ As decomposition says, we should distribute the available information across all
 - Properties/Features of both **Wood** and **Door** are acquired by **WoodenDoor**
 - Generalization-Specialization Relationship
 - IS-A relationship with more parents
-    <img src = "../../images/multiple-inheritance.png" width = "250px">
+    <img src = "../images/multiple-inheritance.png" width = "250px">
 
 ## Packaging
 - To handle large number of classes, *divide and rule*
@@ -406,7 +406,7 @@ As decomposition says, we should distribute the available information across all
 - Classes those collaborate more with each other will be in same package, otherwise it'll be in other package.
 - Packages helps us in isolating the group of classes which can be helped in development independenly.
 - Packages allows us to split them into modules or subsystems and such a independent subsystem can be given to independent development team, and at the end we can integrate them.
-<img src = "../../images/packaging.png" width = "400px">
+<img src = "../images/packaging.png" width = "400px">
 
 ## Visibility
 - Features (*attributes and properties*) visible at different level
@@ -421,7 +421,7 @@ As decomposition says, we should distribute the available information across all
     - It is accesible in inside that class, accessible in the class of the same package, accessible in any child class, infact accessible/visible in any class of that application.
 - **Public** has the most *wide visibiliy* and **Private** has the most *restricted visibility*.
 - These visibilites plays an important role in design and implementation stage.
-    <img src = "../../images/visibility.png" width = "400px">
+    <img src = "../images/visibility.png" width = "400px">
 
 ---------------------------------------
 
@@ -431,12 +431,12 @@ As decomposition says, we should distribute the available information across all
 - `Class` - Printer; Three Partitions
 - `Object` - floorOnePrint: Printer; underlined, Two Partitions
 - `Anonymous Object` - Printer; underlinded, Two Partitions
-    <img src = "../../images/class-representaion-uml.png" width = "300px">
+    <img src = "../images/class-representaion-uml.png" width = "300px">
 
 ## Objects/Class Data
 - In the Object Diagram, there are certain attributes whose values are changing where ther are certain attributes whose values are not changing.
 - Observation: There are certain data which are *object specific* whereas there are certain data which are *constant*
-<img src = "../../images/objects-class-data.png" width = "300px">
+<img src = "../images/objects-class-data.png" width = "300px">
 
 - The red rectanglse shows the content which is being repeated in every instance of the object.
 - The blue rectangle shows the content which is different in every instance of the object.
@@ -446,7 +446,7 @@ As decomposition says, we should distribute the available information across all
 - To *avoid* the *relication* of data, **Static** comes into the picture
 
 - Static Data and Operations:
-    <img src = "../../images/objects-class-data-2.png" width = "400px">
+    <img src = "../images/objects-class-data-2.png" width = "400px">
     - Now, we represent the data by underline which will be used by every object.
 - Data which is available for every instance of object is called **Instance Data**.
 - Data which is not available for every instance of object is called **Static Data**.
@@ -460,17 +460,17 @@ As decomposition says, we should distribute the available information across all
 - "Essential" Attributes
 - "Good to Have" Attributes
 - Derived attributes are represented with a preceeding "/"
-    <img src = "../../images/dependent-independent-attributes.png">
+    <img src = "../images/dependent-independent-attributes.png">
 
 ## Code Duplication
 - **Common** *(Shown in Red Color)* / **Proprietary** *(Shown in Blue Color)* Attributes
 - **Common** *(Shown in Red Color)* / **Proprietary** *(Shown in Blue Color)* Operations
-    <img src = "../../images/code-duplication.png" width = "400px">
+    <img src = "../images/code-duplication.png" width = "400px">
 
 ## Code Reuse
 - *Segregage* that which is **Common** *(Shown in Red Color)*
 - *Separate* that which is **Different** *(Shown in Blue Color)*
-    <img src = "../../images/code-reuse.png" width = "400px">
+    <img src = "../images/code-reuse.png" width = "400px">
 
 ## Operation Overloading
 - **S**ame **M**ethod **N**ame **D**ifferent **S**ignatures
@@ -480,10 +480,10 @@ As decomposition says, we should distribute the available information across all
 - add_Fraction_Fraction
 - add_Complex_Complex
 - also known as Static/Compile-Time Polymorphhism
-    <img src = "../../images/oops-operation-overloading-1.png" width = "400px">
+    <img src = "../images/oops-operation-overloading-1.png" width = "400px">
 - Another variant of Calculator Class
     - return type is never considered as the part of operation signature
-    <img src = "../../images/oops-operation-overloading-2.png" width = "250px">
+    <img src = "../images/oops-operation-overloading-2.png" width = "250px">
     - Since, first method and third method are exectly same, Operation Overloading will not take place.
         - We cannot have exactly same operation with same name and same signature
 - Another example:
@@ -492,7 +492,7 @@ As decomposition says, we should distribute the available information across all
     - Operation Overloading can be done in the same class, not from the different class
     - *Faded text* shows operation/method inherited from the base class
     - As the methods are different in PrecisionControlledCalculator, it is Operator Overloading
-    <img src = "../../images/oops-operation-overloading-3.png" width = "250px">
+    <img src = "../images/oops-operation-overloading-3.png" width = "250px">
 
 ## Operation Overriding
 - **S**ame **M**ethod **N**ame, **S**ame **S**ignature in Parent and Child Class
@@ -501,7 +501,7 @@ As decomposition says, we should distribute the available information across all
 - Overruling/Rewriting/Overwriting
 - Operation Overriding helps in achieveing Runtime/Dynamic Polymorphism
 - Language Specific Implementation
-    <img src = "../../images/oops-operation-overriding.png" width = "250px">
+    <img src = "../images/oops-operation-overriding.png" width = "250px">
     - Car Class has its own method start() and the other start() method *(shown in gray color)* is inherited from the Vehicle Class.
     - Local method/operation is preffered over the inherited method/operation
     - The operation which is inherited *(gray in color)* will not be used
@@ -510,7 +510,7 @@ As decomposition says, we should distribute the available information across all
 ## Polymorphism
 - Same Operation Multiple Implementations
 - New Implementations Possible
-<img src = "../../images/oops-polymorphism.png" width = "250px">
+<img src = "../images/oops-polymorphism.png" width = "250px">
 
 
 

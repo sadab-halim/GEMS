@@ -428,9 +428,9 @@ As decomposition says, we should distribute the available information across all
 # Mechanisms
 
 ## Class Representation in UML
-- `Class` - Printer; Three Partitions
-- `Object` - floorOnePrint: Printer; underlined, Two Partitions
-- `Anonymous Object` - Printer; underlinded, Two Partitions
+- **Class** - Printer; Three Partitions
+- **Object** - floorOnePrint: Printer; underlined, Two Partitions
+- **Anonymous Object** - Printer; underlinded, Two Partitions
     <img src = "../images/class-representaion-uml.png" width = "300px">
 
 ## Objects/Class Data
@@ -443,9 +443,9 @@ As decomposition says, we should distribute the available information across all
 - Data represented within a blue rectangle is specific to that particular object
 - Data represented within a red rectangle is constant with the Class
 - Data need not be replicated unenecessary hence, doing the required changes.
-- To *avoid* the *relication* of data, **Static** comes into the picture
+- To *avoid* the *replication* of data, **Static** comes into the picture
 
-- Static Data and Operations:
+- **Static Data and Operations**:
     <img src = "../images/objects-class-data-2.png" width = "400px">
     - Now, we represent the data by underline which will be used by every object.
 - Data which is available for every instance of object is called **Instance Data**.
@@ -455,6 +455,10 @@ As decomposition says, we should distribute the available information across all
 - whereas database, port (static data) and connect (static operation) is going to be same for every object.
 - Whenever we call a static method, we cannot use instance data.
 - Any static operation can access only static data.
+    - It cannot access non-static data, because it is differing for every object.
+    DBConnection.connect() will use default username and password, if it happens to be..
+- Static Data is never shown in the objects
+    - Because it is not attached to objects, it is attached to class
 
 ## Dependent and Independent Attributes
 - "Essential" Attributes
@@ -466,10 +470,11 @@ As decomposition says, we should distribute the available information across all
 - **Common** *(Shown in Red Color)* / **Proprietary** *(Shown in Blue Color)* Attributes
 - **Common** *(Shown in Red Color)* / **Proprietary** *(Shown in Blue Color)* Operations
     <img src = "../images/code-duplication.png" width = "400px">
+- There can be certain attributes and operations which might be common to multiple classes in the given domain model.
 
 ## Code Reuse
 - *Segregage* that which is **Common** *(Shown in Red Color)*
-- *Separate* that which is **Different** *(Shown in Blue Color)*
+- *Separate* out which is **Different** *(Shown in Blue Color)*
     <img src = "../images/code-reuse.png" width = "400px">
 
 ## Operation Overloading
@@ -488,8 +493,8 @@ As decomposition says, we should distribute the available information across all
         - We cannot have exactly same operation with same name and same signature
 - Another example:
     - add_double_double_double
-    - method name is same, but parameter signature are different
-    - Operation Overloading can be done in the same class, not from the different class
+    - method name is same, but parameter signature is different
+    - Operation Overloading can be done in the same class, but not from the different class
     - *Faded text* shows operation/method inherited from the base class
     - As the methods are different in PrecisionControlledCalculator, it is Operator Overloading
     <img src = "../images/oops-operation-overloading-3.png" width = "250px">
@@ -505,12 +510,95 @@ As decomposition says, we should distribute the available information across all
     - Car Class has its own method start() and the other start() method *(shown in gray color)* is inherited from the Vehicle Class.
     - Local method/operation is preffered over the inherited method/operation
     - The operation which is inherited *(gray in color)* will not be used
-    - Since the local method/operation is preffered, overriding of the actual method takes place, hence Operation Overriding
+    - Since the local method/operation is preffered, overriding of the actual method takes place, hence **Operation Overriding**
 
 ## Polymorphism
 - Same Operation Multiple Implementations
 - New Implementations Possible
+- Vehicle describes that their must be start() implementation, whereas Car, Scooter and AutoRickshaw they provide different implementation to operation called as start()
+- The start() method is implemented by the 3 child classes
+- This polymorphism is a runtime polymorphism.
+- Instance of Car, Scooter and AutoRickshaw was dynamically created at runtime, and that's the reason why it is called as Runtime Polymorphism.
+- Whichever instance is created, appropriate start method will be called
 <img src = "../images/oops-polymorphism.png" width = "250px">
 
+### Polymorphism (all are equal)
+- Truck IS-A Vehicle? **NO** (by definition)
+- According to our model, Truck is NOT-A Vehicle, it's not mentinoned in the model.
+- Heavy Vehicles are not allowed in the bridge.
+- When Car passess through the gate, now, it's no more a Car, it's a Vehicle.
+- When these Vehicles are enter through the gate, the Vehicles are going to appear as blackbox known as **Vehicle**
+    <img src = "../images/polymorphism.png" width = "250px">
+
+- But the may behave differently
+    ```java
+    void repair() {
+        Vehicle v1 = new Vehicle();
+        //v1 is instance of new vehicle
+        //it is pointing to, by a ref of vehicle type
+        workshop.test(v1); //this is allowed ✅
+
+        Car c1 = new Car()
+        workshop.test(c1); //this is allowed ✅
+
+        //an object of Car, can it be pointed to ref of type Vehicle? 👉 Yes
+        //bcoz Car IS-A Vehicle
+        //the ref is of type Vehicle, whereas object is of type Car
+        //which side start() will it call? Left hand side or Right hand side?
+        //when we are passing v2 to it, v2 is an object of the car
+        //always inside the method, the test() is accepting v2 internally, so when we call the start() inside the test()
+        //⭐ always method of that object will be called and it'll ignore what ref it is pointing to it.
+        // so, it'll call the start() of the car itself.
+        //`workshop.test(v2)` will definitely operation on the car
+        Vehicle v2 = new Car();
+        workshop.test(v2);
+        
+        //Car's ref is now pointing to an object of Vehicle type
+        //Remember, every vehicle need not be a car, it can be anything.
+        //But, any Car will always be a Vehicle
+        //Car IS-A Vehicle, *always*
+        //Vehicle IS-A Car, *not always*
+        //This description is not valid, hence not allowed ❌
+        //
+        Car c2 = new Vehicle();
+        workshop.test(c2);
+    }
+    ```
+
+- 
+    ```java
+    class workshop {
+        boolean test (Vehicle testVehicle) {
+            testVehicle.start() // calls start method
+            return true; // if startSuccessfully
+        }
+    }
+    ```
+
+- Without knowing the type of an object, it's dynamically calling it, at runtime.
+- Imagine a scenario :
+    - Their is an array of vehicles.
+    - Every time we try to call the next element of array, it'll try to find out Car/Scooter/Autorickshaw, and acc it'll call the start()
+    - Binding is happening at runtime.
+
+- Their is generally no requirement of making an instance of Base Class.
+- Instance of Base Class is never required.
+    - Because, you'll never see new Vehicle, because their is nothing known as Vehicle.
+    - However, we use the base class, to refererring something.
+    - For example, this is my new Vehicle, by pointing to it.
+
+- Having a start() method, is mandatory, however, the implementation is done by the child classes not with the base class, because it is meaningles.
+
+- Whenever we declare a method as **abstract**
+- OOP allows us to get rid of its implementation
+- So, if we declare our operation as abstract, we don't have to provide any implementation to it.
+
+- To override the operation in the child class, we need that operation in the base class.
+- In UML, **abstract** is written in *italics*
+- Any name of operation written in *italics* is treated as abstract operation.
+
+- If even at least one method in the class is **abstract**, we must make that class itself as **abstract**
+
+- When we declare a class as abstract, we cannot make it instances.
 
 

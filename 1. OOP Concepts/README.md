@@ -602,3 +602,42 @@ As decomposition says, we should distribute the available information across all
 - When we declare a class as abstract, we cannot make it instances.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------
+
+## Cheatsheet of Relationship Between Classes📝
+- **IS-A** relationship : **Inheritance**
+    - Example : A IS-A B
+- **HAS-A** relationship : **Aggregation** OR **Composition**
+    - Example : 
+        - A HAS-AN instance of B
+        - If B **can** exist without A 👉 **Aggregation**
+        - If B **cannot** exist without A 👉 **Composition**
+- 2 classes call each other : **Association**
+    - But when one class other NOT vice-versa : **Uni-Directional Association**
+- Interfaces Involed? 👉 Make the -------- lines
+
+--------------------------------------
+
+## Cheatsheet 📝
+<img src = "../images/cheatsheet-relationships.png">
+
+--------------------------------------
+
+## Basics of LLD

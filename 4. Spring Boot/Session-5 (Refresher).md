@@ -56,7 +56,7 @@ Spring Boot makes it easy to create **stand-alone**, **production-grade** Spring
 - Learn more: [Click here](https://maven.apache.org/)
 - We can create a maven project via Eclipse
 - Simplest Structore looks as follows:
-    <img src = "../../../images/maven-proj-tree.png">
+    <img src = "../images/maven-proj-tree.png">
 - Ref: [Click here](https://www.tutorialspoint.com/maven/maven_quick_guide)
 
 ### Some of the quick ways to create a Spring Boot Application:
@@ -131,7 +131,7 @@ public class HelloController {
 ```
 
 #### Output
-<img src = "../../../images/spring-boot-hello.png" >
+<img src = "../images/spring-boot-hello.png" >
 
 
 ### Understanding Annotations
@@ -160,7 +160,7 @@ If you want to write unit test cases, some convention will be followed for the t
 ## Introducing REST
 - REST : **RE**presentational **S**tate **T**ransfer
 - REST was defined by *Roy Fielding*, a computer scientist.
-   <img src = "../../../images/spring-boot-rest.png">
+   <img src = "../images/spring-boot-rest.png">
 
 - When a RESTful API is called, the server will transfer to the client a *representation* of the state of the requested resource.
 - In REST, everything is defined as 'representation of a resource' and we can perform CRUD on resources using REST
@@ -199,7 +199,7 @@ If you want to write unit test cases, some convention will be followed for the t
 - DispatcherServlet *renders* the view which is visible to the browser
 - **ViewResolver** takes and convert it into physical view from logical view.
 
-    <img src = "../../../images/Spring MVC Flow.png">
+    <img src = "../images/Spring MVC Flow.png">
 
 ## Annotations
 - Spring Boot can be used for:
@@ -607,7 +607,7 @@ After:
     ```
 
 ## Spring Boot Flow Architecture
-<img src = "../../../images/Spring-Boot-Flow-Architecture.png">
+<img src = "../images/Spring-Boot-Flow-Architecture.png">
 
 ## Spring Data JPA
 - JPA stands for Java Persistence API
@@ -707,33 +707,33 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 ### Testing using Postman
 #### GET Method
-<img src = "../../../images/spring-boot-emp-method-get.png">
+<img src = "../images/spring-boot-emp-method-get.png">
 
 #### POST Method
-<img src = "../../../images/spring-boot-emp-method-post.png">
+<img src = "../images/spring-boot-emp-method-post.png">
 
 #### Inside MySQL Workbench
-<img src = "../../../images/spring-boot-mysql-workbench.png">
+<img src = "../images/spring-boot-mysql-workbench.png">
 
 #### POST Method (2nd Request)
-<img src = "../../../images/spring-boot-emp-method-post2.png">
+<img src = "../images/spring-boot-emp-method-post2.png">
 
 #### GET Method(ID: 1)
-<img src = "../../../images/spring-boot-emp-method-get-emp1.png">
+<img src = "../images/spring-boot-emp-method-get-emp1.png">
 
 #### GET Method(ID: 2)
-<img src = "../../../images/spring-boot-emp-method-get-emp2.png">
+<img src = "../images/spring-boot-emp-method-get-emp2.png">
 
 #### Console 
 These are the queries being interally fired by the Spring Boot Application 👇 <br/>
-<img src = "../../../images/spring-boot-quries-being-internally-fired.png">
+<img src = "../images/spring-boot-quries-being-internally-fired.png">
 
 #### PUT Method (Modification)
 Postman 👇 <br/>
-<img src = "../../../images/spring-boot-emp-method-put.png">
+<img src = "../images/spring-boot-emp-method-put.png">
 
 SQL Workbench 👇 <br/>
-<img src = "../../../images/spring-boot-emp-method-put-sql.png">
+<img src = "../images/spring-boot-emp-method-put-sql.png">
 
 -------------------------------------------------------
 
@@ -772,7 +772,7 @@ SQL Workbench 👇 <br/>
     3. Using Native Query :
         - in native query we have to specify with a boolean flag
 
-<img src = "../../../images/springboot-spring-data-jpa.png">
+<img src = "../images/springboot-spring-data-jpa.png">
   
 In the console we are getting the Hibernate query, because in the application.properties we have configured that, show-ddl = true
 
@@ -785,7 +785,7 @@ To See CriteriaQuery and Querydsl 👉 https://spring.io/blog/2011/04/26/advance
 
 ### Creating Jar File
 Run as --> Maven Build --> Goals: clean package 
-<img src = "../../../images/spring-boot-jar-generated.png">
+<img src = "../images/spring-boot-jar-generated.png">
 
 ## Adding DevTools Dependency
 Copy the dependencies from Spring Initializr
@@ -795,7 +795,7 @@ Copy the dependencies from Spring Initializr
 ## Final Code : Part - 1
 
 #### Project Structure
-<img src = "../../../images/spring-boot-folder-structure-1.png">
+<img src = "../images/spring-boot-folder-structure-1.png">
 
 #### pom.xml
 ```xml
@@ -1083,7 +1083,7 @@ spring.jpa.show-sql=true
 
 ## Final Code : Part - 2
 ### Project Structure
-<img src = "../../../images/spring-boot-proj-structure-using-swagger.png">
+<img src = "../images/spring-boot-proj-structure-using-swagger.png">
 
 #### pom.xml
 ```xml
@@ -1487,13 +1487,13 @@ Swagger is one of the solution for this.
 ```
 
 ### Generating Documentatin Using Postman
-<img src = "../../../images/spring-boot-postman-swagger-docs.png">
+<img src = "../images/spring-boot-postman-swagger-docs.png">
 
 ### Generating Documentation of our Project in the Web
 The UI of complete Project has been generated by appending the `swagger-ui/index.html` to the base url
 
-<img src = "../../../images/swagger-ui-1.png">
-<img src = "../../../images/swagger-ui-2.png">
+<img src = "../images/swagger-ui-1.png">
+<img src = "../images/swagger-ui-2.png">
 
 For better understanding of the UI part watch → *timestamp: 1:10:00 - Sesssion: 3* <br/>
 For customization → Adding `springdoc.swagger-ui.path=/swagger-ui.html` in application.properties file 
@@ -1534,7 +1534,7 @@ public class MySpringBootAppApplication {
 ```
 
 #### From **OpenAPI Definition** changed to **Employee CRUD REST API**
-<img src = "../../../images/swagger-ui-3.png">
+<img src = "../images/swagger-ui-3.png">
 
 ---------------------------------------------------
 
@@ -1596,7 +1596,7 @@ Following properties can be used to control the exposure of endpoints
 | management.endpoints.web.exposure.include | health |
 
 ### Testing the Actuator using Postman
-<img src = "../../../images/spring-boot-actuator-postman.png">
+<img src = "../images/spring-boot-actuator-postman.png">
 
 Actuator endpoints let you monitor and interact with your application. Spring Boot includes a number of built-in endpoints and lets you add your own. For example, the `health` endpoint provides basic application health information.
 
@@ -1610,8 +1610,8 @@ For example, by default, the `health` endpoint is mapped to `/actuator/health`
 #### Modifying application.properties
 Adding `management.endpoints.web.exposure.include=info,metrics,health` in application.properties file
 
-<img src = "../../../images/spring-boot-actuator-postman-info.png"> <br/>
-<img src = "../../../images/spring-boot-actuator-postman-metrics.png">
+<img src = "../images/spring-boot-actuator-postman-info.png"> <br/>
+<img src = "../images/spring-boot-actuator-postman-metrics.png">
 
 Adding these things 👇 in the application.properties file
 ```
@@ -1620,24 +1620,24 @@ management.server.base-path=/management
 ```
 
 #### Before
-<img src = "../../../images/spring-boot-actuator-management-before.png">
+<img src = "../images/spring-boot-actuator-management-before.png">
 
 #### After
-<img src = "../../../images/spring-boot-actuator-management-after.png">
+<img src = "../images/spring-boot-actuator-management-after.png">
 
 If we don't want the /actuator thing, then 👇 (url has been shorten) <br/>
 
 Adding `management.endpoints.web.base-path=/` in application.properties file <br/>
-<img src = "../../../images/spring-boot-actuator-management-removed-actuator.png">
+<img src = "../images/spring-boot-actuator-management-removed-actuator.png">
 
 After incorporating this thing 👇 in application.properties file <br/>
 `management.endpoint.health.show-details=always`
 
 It shows something diff in the json format in comparison to what it was showing previously 👇
-<img src = "../../../images/spring-boot-actuator-management-health-always.png">
+<img src = "../images/spring-boot-actuator-management-health-always.png">
 
 If we remove the endpoint, then this is the output we get 👇
-<img src = "../../../images/spring-boot-actuator-management-removed-endpoints.png">
+<img src = "../images/spring-boot-actuator-management-removed-endpoints.png">
 
 ### Updating the build plugin inside the pom.xml file
 #### pom.xml
@@ -1701,30 +1701,30 @@ Dependency for testing security
 When we enter the url as `http://localhost:8080/hello` it redirects to `http://localhost:8080/login` bcoz it's secured now, it was achieved by using **Spring Security**
 
 Login Page 👇 <br/>
-<img src = "../../../images/spring-boot-login-page.png">
+<img src = "../images/spring-boot-login-page.png">
 
 The default username of the login page is **user** whereas the password is given in the console 👇 <br/>
-<img src = "../../../images/spring-boot-security-password.png">
+<img src = "../images/spring-boot-security-password.png">
 
 After logging in with the correct credentials, it'll show the inner material, i.e., the output 👇
-<img src = "../../../images/spring-boot-security-logged-in.png">
+<img src = "../images/spring-boot-security-logged-in.png">
 
 Even if we try accessing the metrics endpoint or the info endpoint, still we'll get the login page, it means that our spring boot application is completely secured, and can be accessed by only providing the correct credentials, and that is shared only with the developers in the console, and this login page is for just development purpose, not production use.
 
 If we want to logout after seeing the contents of the web page, then all we need to do is to type logout at the end of the url, for example `http://localhost:8080/logout` (base-url/logout)
 
 Then, it'll show a confirmation page for clicking on the log out button 👇 <br/>
-<img src = "../../../images/spring-boot-security-log-out.png">
+<img src = "../images/spring-boot-security-log-out.png">
 
 Page after logging out 👇 <br/>
-<img src = "../../../images/spring-boot-security-logged-out.png">
+<img src = "../images/spring-boot-security-logged-out.png">
 
 
 --------------------------------
 
 ## Final Code : Part - 3
 ### Project Structure
-<img src = "../../../images/spring-boot-proj-structure-using-swagger.png">
+<img src = "../images/spring-boot-proj-structure-using-swagger.png">
 
 #### pom.xml
 ```xml
@@ -2220,7 +2220,7 @@ If we want to disable console logging and write output only to a file, we need a
 
 The logback-spring.xml file could be added in 'resource' folder with following content.
 
-<img src = "../../../images/jks-sample-logback.png">
+<img src = "../images/jks-sample-logback.png">
 
 You need to add logging.file.name to our application.properties or application.yaml: logging.file.name=myapplication.log
 
@@ -2306,5 +2306,5 @@ The spring-boot-starter-test "Starter" (in the test scope) contains the followin
 - @Retention
 - @Target
 
-<img src = "../../../images/spring-boot-hierarchy-of-annotation.png">
+<img src = "../images/spring-boot-hierarchy-of-annotation.png">
 

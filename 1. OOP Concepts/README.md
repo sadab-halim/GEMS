@@ -639,5 +639,3 @@ As decomposition says, we should distribute the available information across all
 <img src = "../images/cheatsheet-relationships.png">
 
 --------------------------------------
-
-## Basics of LLD

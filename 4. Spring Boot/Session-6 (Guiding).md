@@ -40,5 +40,5 @@
 - @Retention
 - @Target
 
-<img src = "../../../images/spring-boot-hierarchy-of-annotation.png">
+<img src = "../images/spring-boot-hierarchy-of-annotation.png">
 

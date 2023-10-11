@@ -21,7 +21,7 @@
 - It sends the info back to the DispatcherServlet, DispatchcerServlet then takes ViewResolver.
     - DispatcherServlet renders the view which is visible to the browser
 - ViewResolver takes and convert it into physical view from logical view.
-    <img src = "../../../images/Spring MVC Flow.png">
+    <img src = "../images/Spring MVC Flow.png">
 
 ## Annotations
 - Spring Boot can be used for:
@@ -291,7 +291,7 @@ After:
 ```
 
 ## Spring Boot Flow Architecture
-<img src = "../../../images/Spring-Boot-Flow-Architecture.png">
+<img src = "../images/Spring-Boot-Flow-Architecture.png">
 
 ## Spring Data JPA
 - JPA stands for Java Persistence API
@@ -392,33 +392,33 @@ Guide 👉 https://spring.io/guides/gs/accessing-data-jpa/
 
 ### Testing using Postman
 #### GET Method
-<img src = "../../../images/spring-boot-emp-method-get.png">
+<img src = "../images/spring-boot-emp-method-get.png">
 
 #### POST Method
-<img src = "../../../images/spring-boot-emp-method-post.png">
+<img src = "../images/spring-boot-emp-method-post.png">
 
 #### Inside MySQL Workbench
-<img src = "../../../images/spring-boot-mysql-workbench.png">
+<img src = "../images/spring-boot-mysql-workbench.png">
 
 #### POST Method (2nd Request)
-<img src = "../../../images/spring-boot-emp-method-post2.png">
+<img src = "../images/spring-boot-emp-method-post2.png">
 
 #### GET Method(ID: 1)
-<img src = "../../../images/spring-boot-emp-method-get-emp1.png">
+<img src = "../images/spring-boot-emp-method-get-emp1.png">
 
 #### GET Method(ID: 2)
-<img src = "../../../images/spring-boot-emp-method-get-emp2.png">
+<img src = "../images/spring-boot-emp-method-get-emp2.png">
 
 #### Console 
 These are the queries being interally fired by the Spring Boot Application 👇 <br/>
-<img src = "../../../images/spring-boot-quries-being-internally-fired.png">
+<img src = "../images/spring-boot-quries-being-internally-fired.png">
 
 #### PUT Method (Modification)
 Postman 👇 <br/>
-<img src = "../../../images/spring-boot-emp-method-put.png">
+<img src = "../images/spring-boot-emp-method-put.png">
 
 SQL Workbench 👇 <br/>
-<img src = "../../../images/spring-boot-emp-method-put-sql.png">
+<img src = "../images/spring-boot-emp-method-put-sql.png">
 
 -------------------------------------------------------
 
@@ -429,7 +429,7 @@ There are two ways (by navigating to command prompt at the application level)
 
 ### Creating Jar File
 Run as --> Maven Build --> Goals: clean package 
-<img src = "../../../images/spring-boot-jar-generated.png">
+<img src = "../images/spring-boot-jar-generated.png">
 
 ## Adding DevTools Dependency
 Copy the dependencies from Spring Initializr
@@ -439,7 +439,7 @@ Copy the dependencies from Spring Initializr
 ## Final Code
 
 #### Project Structure
-<img src = "../../../images/spring-boot-folder-structure-1.png">
+<img src = "../images/spring-boot-folder-structure-1.png">
 
 #### pom.xml
 ```xml

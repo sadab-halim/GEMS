@@ -79,7 +79,7 @@ Spring Boot makes it easy to create **stand-alone**, **production-grade** Spring
 - Learn more: [Click here](https://maven.apache.org/)
 - We can create a maven project via Eclipse
 - Simplest Structore looks as follows:
-    <img src = "../../../images/maven-proj-tree.png">
+    <img src = "../images/maven-proj-tree.png">
 - Ref: [Click here](https://www.tutorialspoint.com/maven/maven_quick_guide)
 
 ### Some of the quick ways to create a Spring Boot Application:
@@ -158,7 +158,7 @@ public class HelloController {
 ```
 
 #### Output
-<img src = "../../../images/spring-boot-hello.png" >
+<img src = "../images/spring-boot-hello.png" >
 
 ### Understanding Annotations
 | Annotations | Description |
@@ -189,7 +189,7 @@ server.servlet.context-path=/MyApp # specifying the base path
 ## Introducing REST
 - REST : **RE**presentational **S**tate **T**ransfer
 - REST was defined by *Roy Fielding*, a computer scientist.
-    <img src = "../../../images/spring-boot-rest.png">
+    <img src = "../images/spring-boot-rest.png">
 - When a RESTful API is called, the server will transfer to the client a *representation* of the state of the requested resource.
 - In REST, everything is defined as '*representation of a resource*' and we can perform CRUD operation on resources using REST API
 - REST key principles
